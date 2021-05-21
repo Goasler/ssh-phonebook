@@ -12,7 +12,7 @@ Please consider:
 cd ~/
 mkdir .bin 
 cd .bin
-(copy/download the two files in that folder)
+(copy/download the files here)
 chmod +x ssh-phonebook
 echo 'export PATH="$HOME/.bin:$PATH"' >> ~/.bashrc 
 ```
