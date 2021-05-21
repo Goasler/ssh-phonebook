@@ -14,7 +14,7 @@ mkdir .bin
 cd .bin
 (copy/download the files here)
 chmod +x ssh-phonebook
-echo 'export PATH="$HOME/.bin:$PATH"' >> ~/.bashrc 
+echo 'export PATH="$HOME/.bin:$PATH"' >> ~/.bashrc #only needed if you wanna call this program from anywhere in your system
 ```
 Install instructions based on https://unix.stackexchange.com/a/51 .
 
