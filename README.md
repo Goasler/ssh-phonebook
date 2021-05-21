@@ -38,5 +38,6 @@ ssh-phonebook
 
 
 If you miss any features feel free to open a feature request.
+ 
 If you found any Bugs, let me know and i will fix it as soon as possible.
 
