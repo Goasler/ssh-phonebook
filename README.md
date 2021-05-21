@@ -9,6 +9,7 @@ Please consider:
  
 ## Install
 I read often that you should not interrupt your OS while putting files in any binary folders like /bin, /usr/bin, etc. 
+ 
 Based on that, i recommend you to install it on your home directory and add this directory to $PATH.
 ```
 cd ~/
