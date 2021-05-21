@@ -1,0 +1,148 @@
+#!/bin/bash
+
+# -= APP INFO =-
+# Name....: ssh-phonebook
+# Version.: v1.0
+# Author..: Goasler
+
+# MENU Config
+source ssh-phonebook.conf
+
+
+dialing()
+{
+                clear
+                echo  -e "\e[1m\e[33m     MMM MMMMM"
+                echo  -e "\e[1m\e[33m    MMMMM MMMMM"
+                echo  -e "\e[1m\e[33m   MMMMMMM MMMMM"
+                echo  -e "\e[1m\e[33m   MMMMMMMM MMMMM"
+                echo  -e "\e[1m\e[33m   MMMMMMMMM MMMMM"
+                echo  -e "\e[1m\e[33m   MMMMMMM"
+                echo  -e "\e[1m\e[33m   MMMMMMMM"
+                echo  -e "\e[1m\e[33m   MMMMMMMMM"
+                echo  -e "\e[1m\e[33m    MMMMMMMMM                  Dialing..."
+                echo  -e "\e[1m\e[33m     MMMMMMMMM"
+                echo  -e "\e[1m\e[33m      MMMMMMMMM"
+                echo  -e "\e[1m\e[33m       MMMMMMMMM"
+                echo  -e "\e[1m\e[33m        MMMMMMMMM"
+                echo  -e "\e[1m\e[33m         MMMMMMMMMMM MMMMM"
+                echo  -e "\e[1m\e[33m           MMMMMMMMMM MMMMM"
+                echo  -e "\e[1m\e[33m              MMMMMMMM MMMMM       MMM     MMM     MMM"
+                echo  -e "\e[1m\e[33m                 MMMMMM MMMMM      MMM     MMM     MMM"
+                echo " "
+
+}
+
+# WAN Test
+ping -c1 -W1 -q 8.8.8.8 &>/dev/null
+status=$( echo $? )
+if [[ $status != 0 ]] ; then
+        echo "CRITICAL: WAN is unreachable!"
+        exit
+fi
+
+
+# Check if $1 & $2 are not empty
+if [ -n "$1" ] && [ -n "$2" ];
+then
+	dialing # call function
+	echo -e "Connecting directly to $1:$2... "
+	echo -e "\e[0m"
+	ssh $1 -p $2
+	exit
+fi
+
+#MENU
+clear
+tput sc
+echo  -e "\e[1m\e[33m "
+echo "                             MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "                            MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "                           MMMMMMMMM                 MMMMMMMMM"
+echo "                          MMMMMMMMM                   MMMMMMMMM"
+echo "                          MMMMMMMMM  MMMM       MMMM  MMMMMMMMM"
+echo "                           MMMMMMM   MMMM       MMMM   MMMMMMM"
+echo "                                    MMMMMMMMMMMMMMMMM"
+echo "                                   MMMMMMMMMMMMMMMMMMM"
+echo "                                  MMMMM 1 | 2 | 3 MMMMM"
+echo "                                 MMMMMMMMMMMMMMMMMMMMMMM"
+echo "                                MMMMMMM 4 | 5 | 6 MMMMMMM"
+echo "                               MMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "                              MMMMMMMMM 7 | 8 | 9 MMMMMMMMM"
+echo "                             MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "                             MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo "                             MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+echo " "
+echo "                                    - SSH Phonebook -"
+tput rc
+echo " "
+echo -e "\e[1m\e[32m    -=[ Menu ]=-\e[0m"
+echo -e "\e[1m\e[33m====================\e[1m\e[32m"
+# Check which items has contents, then display this items
+if [ -n "$ITEM1" ]; then echo " "$ITEM1; fi
+if [ -n "$ITEM2" ]; then echo " "$ITEM2; fi
+if [ -n "$ITEM3" ]; then echo " "$ITEM3; fi
+if [ -n "$ITEM4" ]; then echo " "$ITEM4; fi
+if [ -n "$ITEM5" ]; then echo " "$ITEM5; fi
+if [ -n "$ITEM6" ]; then echo " "$ITEM6; fi
+if [ -n "$ITEM7" ]; then echo " "$ITEM7; fi
+if [ -n "$ITEM8" ]; then echo " "$ITEM8; fi
+if [ -n "$ITEM9" ]; then echo " "$ITEM9; fi
+if [ -n "$ITEM0" ]; then echo " "$ITEM0; fi
+echo -e " "
+echo -e " Q. Exit"
+echo -e "\e[1m\e[33m====================\e[0m"
+echo -en "\e[1m\e[33m Your Choice: "
+read -n 1 menu;
+echo -e "\e[0m "
+echo " "
+case $menu in
+        1)	    dialing # call function
+		        echo -e "Connecting to $IP1:$PORT1 ... "
+		        echo -e "\e[0m"
+		        ssh $IP1 -p $PORT1 ;;
+        2) 	    dialing # call function
+                echo -e "Connecting to $IP2:$PORT2 ... "
+                echo -e "\e[0m"
+		        ssh $IP2 -p $PORT2 ;;
+        3) 	    dialing # call function
+                echo -e "Connecting to $IP3:$PORT3 ... "
+                echo -e "\e[0m"
+		        ssh $IP3 -p $PORT3 ;;
+        4) 	    dialing # call function
+                echo -e "Connecting to $IP4:$PORT4 ... "
+                echo -e "\e[0m"
+		        ssh $IP4 -p $PORT4 ;;
+        5) 	    dialing # call function
+                echo -e "Connecting to $IP5:$PORT5 ... "
+                echo -e "\e[0m"
+		        ssh $IP5 -p $PORT5 ;;
+        6) 	    dialing # call function
+                echo -e "Connecting to $IP6:$PORT6 ... "
+                echo -e "\e[0m"
+		        ssh $IP6 -p $PORT6 ;;
+        7) 	    dialing # call function
+                echo -e "Connecting to $IP7:$PORT7 ... "
+                echo -e "\e[0m"
+		        ssh $IP7 -p $PORT7 ;;
+        8)      dialing # call function
+                echo -e "Connecting to $IP8:$PORT8 ... "
+                echo -e "\e[0m"
+		        ssh $IP8 -p $PORT8 ;;
+        9)      dialing # call function
+                echo -e "Connecting to $IP9:$PORT9 ... "
+                echo -e "\e[0m"
+		        ssh $IP9 -p $PORT9 ;;
+        0)      dialing # call function
+                echo -e "Connecting to $IP0:$PORT0 ... "
+                echo -e "\e[0m"
+		        ssh $IP0 -p $PORT0 ;;
+        q)      clear
+                unset menu status
+		        exit;;
+esac
+exit
+#EOF
+
+
+
