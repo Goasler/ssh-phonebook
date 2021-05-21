@@ -11,7 +11,7 @@ Please consider:
 ```
 cd ~/
 mkdir .bin 
-cd .bin
+cd .bin/
 (copy/download the files here)
 chmod +x ssh-phonebook
 echo 'export PATH="$HOME/.bin:$PATH"' >> ~/.bashrc #only needed if you wanna call it from anywhere in your system
