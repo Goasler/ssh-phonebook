@@ -17,7 +17,19 @@ chmod +x ssh-phonebook
 echo 'export PATH="$HOME/.bin:$PATH"' >> ~/.bashrc 
 ```
 Install instructions based on https://unix.stackexchange.com/a/51 .
+
  
+## Edit the Config file
+```
+cd ~/.bin/
+nano ssh-phonebook.conf
+```
+or if you prefer vim
+```
+cd ~/.bin/
+vim ssh-phonebook.conf
+```
+
  
 ## Usage
 ```
