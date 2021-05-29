@@ -24,10 +24,10 @@ Install instructions based on https://unix.stackexchange.com/a/51 .
 cd ~/.bin/
 nano ssh-phonebook.conf
 ```
-or if you prefer vim
+or if you prefer vi
 ```
 cd ~/.bin/
-vim ssh-phonebook.conf
+vi ssh-phonebook.conf
 ```
 
  
