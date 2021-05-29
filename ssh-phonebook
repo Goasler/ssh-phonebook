@@ -5,6 +5,11 @@
 # Version.: v1.0
 # Author..: Goasler
 
+##Disclaimer
+# These scripts come without warranty of any kind. Use them at your own risk.
+# I assume no liability for any sort of damages using my scripts may cause.
+
+
 # MENU Config
 source ssh-phonebook.conf
 
