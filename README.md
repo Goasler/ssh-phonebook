@@ -35,8 +35,10 @@ vim ssh-phonebook.conf
 ```
 ssh-phonebook
 ```
-
-
+## Disclaimer
+These scripts come without warranty of any kind. Use them at your own risk. I assume no liability for any sort of damages using my scripts may cause.
+ 
+  
 If you miss any features feel free to open a feature request.
  
 If you found any Bugs, let me know and i will fix it as soon as possible.
